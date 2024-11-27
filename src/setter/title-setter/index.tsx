@@ -4,7 +4,7 @@ import { SettingTarget } from '@alilc/lowcode-types';
 
 import './index.scss';
 
-interface TitleSetterProps {
+export interface TitleSetterProps {
   field?: SettingTarget;
   prop?: SettingTarget;
   value: string;

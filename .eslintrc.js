@@ -1,9 +1,7 @@
 module.exports = {
   extends: [
     'eslint-config-ali/typescript/react',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/react',
+    'prettier',  // 保留基本的 prettier 配置
   ],
   rules: {
     'react/no-multi-comp': 0,

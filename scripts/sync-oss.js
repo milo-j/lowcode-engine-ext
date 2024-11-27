@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const http = require('http');
 const package = require('../package.json');
+
 const { version, name } = package;
 const options = {
   method: 'PUT',
@@ -20,7 +21,7 @@ const onResponse = function (res) {
     chunks.push(chunk);
   });
 
-  res.on('end', (chunk) => {
+  res.on('end', () => {
     const body = Buffer.concat(chunks);
     console.table(JSON.stringify(JSON.parse(body.toString()), null, 2));
   });

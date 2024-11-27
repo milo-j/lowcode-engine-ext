@@ -491,8 +491,9 @@ class MixedSetter extends Component<{
     );
   }
 }
-interface MixedSetterType extends ComponentClass {
+export interface MixedSetterType extends ComponentClass {
   controller: typeof MixedSetterController;
 }
 export default MixedSetter as unknown as MixedSetterType
 (MixedSetter as unknown as MixedSetterType).controller = MixedSetterController;
+
